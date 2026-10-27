@@ -9,14 +9,15 @@ on:
 jobs:
   validate:
     name: Validate monitoring stack
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4
 
       - name: Check Terraform formatting
         run: terraform -chdir=terraform fmt -check -recursive
