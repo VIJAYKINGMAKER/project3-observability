@@ -1,0 +1,11 @@
+groups:
+  - name: monitoring-lab
+    rules:
+      - alert: MonitoringTargetDown
+        expr: up == 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "A monitoring target is down"
+          description: "Prometheus cannot scrape {{ $labels.instance }}."

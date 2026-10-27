@@ -1,0 +1,24 @@
+{
+  "resourceMetrics": [{
+    "resource": {
+      "attributes": [
+        {"key": "service.name", "value": {"stringValue": "project3-demo"}}
+      ]
+    },
+    "scopeMetrics": [{
+      "scope": {"name": "project3-test"},
+      "metrics": [{
+        "name": "project3_test_requests",
+        "unit": "{request}",
+        "sum": {
+          "dataPoints": [{
+            "asInt": "1",
+            "timeUnixNano": "1792814400000000000"
+          }],
+          "aggregationTemporality": "AGGREGATION_TEMPORALITY_CUMULATIVE",
+          "isMonotonic": true
+        }
+      }]
+    }]
+  }]
+}
